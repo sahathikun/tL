@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  violate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        procedure: ["invitation", "compose", "brave", "pitch", "consist"]
+        accent: ["forefinger", "wander", "neither", "condense"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar zr
